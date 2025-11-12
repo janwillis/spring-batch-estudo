@@ -54,6 +54,7 @@ public class MysqlDataSourceConfig {
         Map<String, Object> props = new HashMap<>();
         props.put("hibernate.show_sql", true);
         props.put("hibernate.format_sql", true);
+
         props.put("hibernate.dialect", "org.hibernate.dialect.MySQLDialect");
         return props;
     }
