@@ -4,7 +4,7 @@ package br.com.santander.spring.batch.config.datasource;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.jdbc.DataSourceBuilder;
-import org.springframework.boot.jpa.EntityManagerFactoryBuilder;
+import org.springframework.boot.orm.jpa.EntityManagerFactoryBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
@@ -54,7 +54,6 @@ public class MysqlDataSourceConfig {
         Map<String, Object> props = new HashMap<>();
         props.put("hibernate.show_sql", true);
         props.put("hibernate.format_sql", true);
-
         props.put("hibernate.dialect", "org.hibernate.dialect.MySQLDialect");
         return props;
     }
